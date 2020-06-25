@@ -22,7 +22,7 @@ function add(schemeData) {
 
 // DELETE
 function remove(id) {
-    return db('schemes').where({id}).remove()
+    return db('schemes').where({id}).del()
 }
 
 module.exports = {
@@ -30,5 +30,5 @@ module.exports = {
     findById,
     findSteps,
     add,
-    remove
+    remove,
 }
