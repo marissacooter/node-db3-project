@@ -25,10 +25,22 @@ function remove(id) {
     return db('schemes').where({id}).del()
 }
 
+// PUT
+function update(changes, id) {
+    return db('schemes').where({id}).update(changes)
+}
+
+// ADD STEP
+function addStep(stepData, id) {
+    return db('schemes').where({id}).insert(stepData)
+}
+
 module.exports = {
     find,
     findById,
     findSteps,
     add,
     remove,
+    update,
+    addStep
 }
